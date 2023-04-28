@@ -20,5 +20,6 @@ jobs:
         run: |
           array=${{ env.NOTEBOOKS }}
           for item in ${array[*]}; do
-            echo item;sleep 1;
+            echo "$item"
+            echo [[ "$item" ]]
           done
