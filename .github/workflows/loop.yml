@@ -9,16 +9,21 @@ jobs:
   build_all_notebooks:
     runs-on: ubuntu-latest
     env:
-        NOTEBOOKS: |
+        FIRST: |
           (
             "nb-one"
             "nb-two"
+          ),
+          SECOND: |
+          (
+            "nb2-one"
+            "nb2-two"
           )
     steps:
       - name: run a loop
         shell: bash
         run: |
-          array=${{ env.NOTEBOOKS }}
+          array=${{ env.FIRST }}
           for item in ${array[*]}; do
             echo "$item"
             echo [[ "$item" ]]
