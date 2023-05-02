@@ -11,13 +11,9 @@ jobs:
     env:
         FIRST: |
           (
-            "nb-one"
-            "nb-two"
-          ),
-          SECOND: |
-          (
-            "nb2-one"
-            "nb2-two"
+            "one"
+            "two"
+            "three"
           )
     steps:
       - name: run a loop
@@ -27,4 +23,21 @@ jobs:
           for item in ${array[*]}; do
             echo "$item"
             echo [[ "$item" ]]
+            if [[! $item =~ "one" ]]
+              echo "MATCH: NOT ONE"
+            fi
+            if [[ ! $item =~ "one" | ! $item =~ "two" ]]
+              echo "MATCH: NOT ONE OR TWO"
+            fi
+          done
+      - name: run a loop 2
+        shell: bash
+        run: |
+          array=${{ env.FIRST }}
+          for item in ${array[*]}; do
+            echo "$item"
+            echo [[ "$item" ]]
+            if [[ ! $item =~ "one|two" ]]
+              echo "MATCH: NOT ONE OR TWO"
+            fi
           done
