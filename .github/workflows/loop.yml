@@ -26,7 +26,7 @@ jobs:
             if [[! $item =~ "one" ]]; then
               echo "MATCH: NOT ONE"
             fi
-            if [[ ! $item =~ "one" | ! $item =~ "two" ]]; then
+            if [[ ! $item =~ "one" && ! $item =~ "two" ]]; then
               echo "MATCH: NOT ONE OR TWO"
             fi
           done
