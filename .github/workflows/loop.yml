@@ -23,10 +23,10 @@ jobs:
           for item in ${array[*]}; do
             echo "$item"
             echo [[ "$item" ]]
-            if [[! $item =~ "one" ]]
+            if [[! $item =~ "one" ]]; then
               echo "MATCH: NOT ONE"
             fi
-            if [[ ! $item =~ "one" | ! $item =~ "two" ]]
+            if [[ ! $item =~ "one" | ! $item =~ "two" ]]; then
               echo "MATCH: NOT ONE OR TWO"
             fi
           done
@@ -37,7 +37,7 @@ jobs:
           for item in ${array[*]}; do
             echo "$item"
             echo [[ "$item" ]]
-            if [[ ! $item =~ "one|two" ]]
+            if [[ ! $item =~ "one|two" ]]; then
               echo "MATCH: NOT ONE OR TWO"
             fi
           done
