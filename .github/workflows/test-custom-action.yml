@@ -9,7 +9,3 @@ jobs:
       - name: Hello world action step
         id: hello
         uses: olivialynn/olivia-hello-world-action@v1.1
-        with:
-          who-to-greet: 'Livie'
-      - name: Get the output time
-        run: echo "The time was ${{ steps.hello.outputs.time }}"
