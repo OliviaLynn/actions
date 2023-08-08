@@ -1,0 +1,14 @@
+# Test a custom github action we've made in a different repository
+
+name: test custom action
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test_hello_world:
+    runs-on: ubuntu-latest
+    steps:
+      - name: run stuff
+        run: |
+          echo hi
