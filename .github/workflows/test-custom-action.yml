@@ -6,6 +6,5 @@ jobs:
   test_hello_world:
     runs-on: ubuntu-latest
     steps:
-      - name: Hello world action step
-        id: hello
-        uses: olivialynn/olivia-hello-world-action@v1.1
+      - name: Run action
+        uses: olivialynn/olivia-hello-world-action@v1.2
