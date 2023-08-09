@@ -8,8 +8,8 @@ jobs:
     steps:
       - name: Run action
         id: actionstep
-        uses: olivialynn/olivia-hello-world-action@44d5914c2b7a18d2d453662018eef81f2144001a
+        uses: olivialynn/olivia-hello-world-action@b65186ff9a44c81d84d121d875084263ce737aa1
         with:
-          file-type-to-seek: 'md'
-      - name: Get the output count
+          file-type-to-seek: 'ipynb'
+      - name: Print the output count
         run: echo "The count was ${{ steps.actionstep.outputs.count }}"
