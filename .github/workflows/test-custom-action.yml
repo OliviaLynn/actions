@@ -7,4 +7,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run action
-        uses: olivialynn/olivia-hello-world-action@v1.2
+        uses: olivialynn/olivia-hello-world-action@v1.3
