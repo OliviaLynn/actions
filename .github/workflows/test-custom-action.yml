@@ -8,7 +8,7 @@ jobs:
     steps:
       - name: Run action
         id: actionstep
-        uses: olivialynn/olivia-hello-world-action@a70fcc50d3136ffd4fbca8f2d3a14a103d8e2a80
+        uses: olivialynn/olivia-hello-world-action@44d5914c2b7a18d2d453662018eef81f2144001a
         with:
           file-type-to-seek: 'md'
       - name: Get the output count
