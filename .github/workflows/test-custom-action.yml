@@ -6,6 +6,10 @@ jobs:
   test_hello_world:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
+      - run: |
+          echo ${{ github.workspace }}
+          echo $GITHUB_WORKSPACE
       - name: Run action
         id: actionstep
         uses: olivialynn/olivia-hello-world-action@981de12ae60e468ced71dd49ebbbc1bbf24ef67f
