@@ -2,6 +2,7 @@
 name: test custom action
 on:
   push:
+  pull_request:
   workflow_dispatch:
 jobs:
   test_hello_world:
@@ -20,4 +21,4 @@ jobs:
       - name: Print the output count
         run: echo "The count was ${{ steps.actionstep.outputs.count }}"
       - name: Print the output results
-        run: echo "The coresults were ${{ steps.actionstep.outputs.results }}"
+        run: echo "The results were ${{ steps.actionstep.outputs.results }}"
