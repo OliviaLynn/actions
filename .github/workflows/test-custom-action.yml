@@ -1,6 +1,7 @@
 # Test a custom github action we've made in a different repository
 name: test custom action
 on:
+  push:
   workflow_dispatch:
 jobs:
   test_hello_world:
