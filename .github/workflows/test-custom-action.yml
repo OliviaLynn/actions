@@ -10,6 +10,6 @@ jobs:
         id: actionstep
         uses: olivialynn/olivia-hello-world-action@a70fcc50d3136ffd4fbca8f2d3a14a103d8e2a80
         with:
-          filetype-to-seek: 'md'
+          file-type-to-seek: 'md'
       - name: Get the output count
         run: echo "The count was ${{ steps.actionstep.outputs.count }}"
