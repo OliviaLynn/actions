@@ -8,7 +8,7 @@ jobs:
     steps:
       - name: Run action
         id: actionstep
-        uses: olivialynn/olivia-hello-world-action@b65186ff9a44c81d84d121d875084263ce737aa1
+        uses: olivialynn/olivia-hello-world-action@981de12ae60e468ced71dd49ebbbc1bbf24ef67f
         with:
           file-type-to-seek: 'ipynb'
           dir-to-walk:: ${{ github.workspace }}
