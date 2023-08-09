@@ -11,6 +11,6 @@ jobs:
         uses: olivialynn/olivia-hello-world-action@981de12ae60e468ced71dd49ebbbc1bbf24ef67f
         with:
           file-type-to-seek: 'ipynb'
-          dir-to-walk:: ${{ github.workspace }}
+          dir-to-walk: ${{ github.workspace }}
       - name: Print the output count
         run: echo "The count was ${{ steps.actionstep.outputs.count }}"
