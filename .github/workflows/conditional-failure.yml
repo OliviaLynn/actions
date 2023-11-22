@@ -1,0 +1,14 @@
+name: GitHub Actions Demo
+run-name: Conditional based on trigger
+on:
+  schedule:
+    cron: * * * * *
+  workflow_dispatch:
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+      - name: Conditional based on trigger
+        if: ${{ !failure() && github.event_name != 'workflow_dispatch' }}
+        run: echo "ok!!"
